@@ -41,4 +41,9 @@ describe(`Function 'arrayReverse':`, () => {
     expect(reversed.map(str => str.length))
       .toEqual(input.map(str => str.length));
   });
+
+  it(`should work with letters, numbers and special characters`, () => {
+    expect(arrayReverse(['123', 'abcd', '(#$%&']))
+      .toEqual(['&%$', '#(dc', 'ba321']);
+  });
 });
